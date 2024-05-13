@@ -14,3 +14,9 @@ sudo systemctl enable firewalld
 sudo systemctl status firewalld
 ```  
 
+
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
