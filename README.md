@@ -42,6 +42,7 @@ MariaDB > FLUSH PRIVILEGES;
 4. Load Product Inventory Information to database
 
 Create the db-loadcng-script.sql
+
 ```bash
 cat > db-load-script.sql <<-EOF
 USE ecomdb;
@@ -50,6 +51,20 @@ CREATE TABLE products (id mediumint(8) unsigned NOT NULL auto_increment,Name var
 INSERT INTO products (Name,ImageUrl) VALUES ("Iphone8","iphone-8.jpg"),("Iphone10","iphone-10.jpg"),("Iphone11","iphone-11.jpg"),("Iphone12","iphone-12.jpg"),("Iphone13","iphone-13.jpg"),("Main","banner-image.png"),("Pink_Watch","cart-item2.jpg"),("HeavyWatch","insta-item2.jpg"),("Postedwatch","product-item8.jpg"),("Black_watch","product-item9.jpg"),("Black_watch","product-item10.jpg");
 
 EOF
+```
+Run sql script
+
+```bash
+sudo mysql < db-load-script.sql
+```
+
+# Deploy and Configure Web
+1. Install required packages
+
+```bash
+sudo yum install -y httpd php php-mysqlnd
+sudo firewall-cmd --permanent --zone=public --add-port=80/tcp
+sudo firewall-cmd --reload
 ```
 
 ## License
