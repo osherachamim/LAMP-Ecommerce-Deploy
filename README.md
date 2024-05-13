@@ -67,6 +67,12 @@ sudo firewall-cmd --permanent --zone=public --add-port=80/tcp
 sudo firewall-cmd --reload
 ```
 
+2. Configure httpd
+   Change **DirectoryIndex index.html** to **DirectoryIndex index.php** to make the php page the default page
+   
+```bash
+sudo sed -i 's/index.html/index.php/g' /etc/httpd/conf/httpd.conf
+```
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
