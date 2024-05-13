@@ -33,7 +33,7 @@ sudo firewall-cmd --reload
 3. Configure Database
 
 ```bash
-s$ mysql
+$ mysql
 MariaDB > CREATE DATABASE ecomdb;
 MariaDB > CREATE USER 'ecomuser'@'localhost' IDENTIFIED BY '4g4WJRvqduZ0XMkP168YhFbq';
 MariaDB > GRANT ALL PRIVILEGES ON *.* TO 'ecomuser'@'localhost';
