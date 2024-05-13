@@ -85,9 +85,25 @@ sudo systemctl enable httpd
 
  ```bash
 sudo yum install -y git
-sudo git clone https://github.com/kodekloudhub/learning-app-ecommerce.git /var/www/html/
+sudo git clone https://github.com/osherachamim/LAMP-Ecommerce-Deploy.git /var/www/html/
 ```
 
+5. Update index.php
+Update index.php file to connect to the right database server. In this case localhost since the database is on the same server.
+
+ ```bash
+sudo sed -i 's/172.20.1.101/localhost/g' /var/www/html/index.php
+
+              <?php
+                        $link = mysqli_connect('172.20.1.101', 'ecomuser', 'ecompassword', 'ecomdb');
+                        if ($link) {
+                        $res = mysqli_query($link, "select * from products;");
+                        while ($row = mysqli_fetch_assoc($res)) { ?>
+```
+6. Test
+```bash
+curl http://localhost
+```
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
