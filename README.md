@@ -73,6 +73,21 @@ sudo firewall-cmd --reload
 ```bash
 sudo sed -i 's/index.html/index.php/g' /etc/httpd/conf/httpd.conf
 ```
+
+3. Start httpd
+
+```bash
+sudo systemctl start httpd
+sudo systemctl enable httpd
+```
+
+4. Download code
+
+ ```bash
+sudo yum install -y git
+sudo git clone https://github.com/kodekloudhub/learning-app-ecommerce.git /var/www/html/
+```
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
