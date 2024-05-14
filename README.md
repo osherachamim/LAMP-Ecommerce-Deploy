@@ -4,6 +4,9 @@ This repository serves as a comprehensive guide and toolkit for deploying e-comm
 
 This is a sample e-commerce application built for learning purposes.
 Here's how to deploy it on CentOS systems:
+# Introduction
+This is a sample e-commerce application built for learning purposes.
+Here's how to deploy it on CentOS systems:
 
 # Deploy Pre-Requisites:
 1. Install FirewallD
