@@ -108,4 +108,4 @@ curl http://localhost
 ```
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+This project is licensed under the MIT License - see the [MIT](https://choosealicense.com/licenses/mit/) file for details
